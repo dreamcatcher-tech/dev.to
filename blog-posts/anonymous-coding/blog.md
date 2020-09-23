@@ -1,7 +1,7 @@
 ---
 published: false
-title: "Coding under siege"
-cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg"
+title: "Coding under siege 2"
+cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.png"
 description: "Description of the article"
 tags: tag1, tag2, tag3
 series:
@@ -10,7 +10,7 @@ canonical_url:
 
 This is an example of how to structure a blog post.
 
-![dragon](./assets/dragon.jpg 'Under Siege')
+![dragon](./assets/dragon.png 'Under Siege')
 The thing above delimited by `---` is called a "front matter" and it allows us to keep control over our article in a very easy way. Just edit it with your own data and CI will handle the rest to publish it to dev.to!
 
 You can also take advantage of [embedme](https://github.com/zakhenry/embedme) to extract your code from the markdown file and make sure that what you're displaying in the markdown is always up to date too e.g.
@@ -36,3 +36,4 @@ Things you migth want to be protected from:
 - patent law
 - government
 - tax
+- piracy
