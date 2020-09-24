@@ -1,0 +1,13 @@
+graph TD
+Consumer
+
+LabourA -->|Value| Company1
+Company1 -->|Payment -| LabourA
+Company1 -->|Value +| Consumer
+Consumer -->|Payment| Company1
+
+LabourB -->|Value| Company2
+Company2 -->|Payment -| LabourB
+Company2 -->|Value ++| Consumer
+Consumer -->|Payment| Company2
+
