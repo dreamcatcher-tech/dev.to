@@ -1,8 +1,8 @@
 ---
 published: false
-title: "Threat models for hunted coders"
+title: "Threat modelling for hunted coders"
 cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg"
-description: "Description of the article"
+description: "How to model threats facing coders who are hunted for the code they write, and how to avoid some of those threats to varying degrees with a recommended procedure"
 tags: infosec, privacy, tor, blockchain
 series:
 canonical_url:
@@ -10,6 +10,23 @@ canonical_url:
 
 _“It’s only funny until someone loses an identity”_
 
+**Contents**
+
+1. [Coding Under Threat](#coding-under-threat)
+1. [Goals of an Operating Model](#goals-of-an-operating-model)
+1. [Threat Types](#threat-types)
+1. [Operating Activities](#operating-activities)
+1. [Required Items and Tooling](#required-items-and-tooling)
+1. [Procedure](#procedure)
+1. [Bastions](#bastions)
+1. [Pitfalls](#pitfalls)
+1. [Receiving Funding](#receiving-funding)
+1. [Shutting Down](#shutting-down)
+1. [Contributing to this Article](#contributing-to-this-article)
+
+## Coding Under Threat
+
+Deployed software endures various threats during its operating life, but seldom is the threat to the coding operation itself considered
 But we don't so often consider threat to the coding operation itself.
 We think oftern about the security of our applications, but not so often about the security of ourselves. The ability to keep coding is essential to your project - more important than its present features.
 
@@ -21,45 +38,7 @@ We and others subscribe to the ideals of the FSF, but a natural consequence of f
 
 We are seeking with the interblock project to create a tool that makes suppression resistance easy, and hopefully leads on to being supression proof, but to get there we have to practical, and use the methods available to us at the present technology level.
 
-Things you migth want to be protected from:
-
-- greed
-- fights that you can't deal with right now
-- reputational harm
-- project reputational harm
-- patent law
-- government
-- tax
-- piracy
-- unpopularity
-- discimination
-
-typically correlation is done using credit cards or sim cards. These are crucial pieces of identity to secure anonymously.
-
-Have a separate namespace. Fork the project, rename the terms of the dictionary, and use these to talk with trusted collaborators.
-
-Our first action is potentially our most compromising one, and we need to approach this with formality, and have regular systems in place to audit the security of our operations with regular drills to test readiness and compliance. Further, bounties of shame should be paid by any member failing compliance
-
-Activities:
-
-1. Real life promotion (conferences, videos, friends)
-1. Online Promotion (forums, emails, blogs)
-1. Code commits
-1. Issue posting
-1. TESTING Amazon deployments using serverless.com tooling
-1. PRODUCTION Amazon deployments using serverless.com tooling
-
-the concept of the zero liability company
-only the code matters
-
-[Using vscode](https://code.visualstudio.com/docs/remote/ssh)
-
-what we left out:
-
-- collaboration
-- funding
-
----
+## Goals of an Operating Model
 
 Our model is based on a mythical project operator, called Command, that represents the virtualized interests... Command is the identity to be protected above all else.
 Then there are two types of identity we operate under - transient, and stable.
@@ -84,8 +63,34 @@ Why:
 
 As global activity spreads, the chances of falling afoul of some regulation somewhere approaches certainty, with the only true protection being anonymity.
 
-Threat vectors:
+1. Not possible to be editing a codebase, then git push as another identity
+1. Not possible to login as a cloud identity without using tor
 
+Goals
+
+1. Recreate any identity, and prove previous contribution, with just the keepass db
+1. Not possible to accidentally attempt to push with another identities credentials
+1. Tor gateway shutdown results in no possible pushes to github
+1. Be more resistant to error than a vpn
+1. Friendly developer experience
+1. Rapidly reprovision development environment
+
+Ensuring code equality
+
+## Threat Types
+
+Things you migth want to be protected from:
+
+- greed
+- fights that you can't deal with right now
+- reputational harm
+- project reputational harm
+- patent law
+- government
+- tax
+- piracy
+- unpopularity
+- discimination
 - DMCA takedown
 - Patent infringement
 - Tax Collectors
@@ -103,25 +108,25 @@ Threat vectors:
 - Friend exposure
 - DDoS
 
-Release checklist:
+typically correlation is done using credit cards or sim cards. These are crucial pieces of identity to secure anonymously.
 
-1. Both passed an operational audit
-1. Check every code file for restricted information
+Have a separate namespace. Fork the project, rename the terms of the dictionary, and use these to talk with trusted collaborators.
 
-Roadmap:
-Rehearsal
-Done when: founders have passed each others audits based on an agreed model, and has been operating for 4 weeks
-Public release
-Growth
-Done when: code contributions and tickets from people we don’t know
-Designed to stay under the radar from legal threats long enough to grow
-Best protection is popularity
-Consolidate: begin legal claims to assets and outstanding bills, etc
-Clear operation
+Our first action is potentially our most compromising one, and we need to approach this with formality, and have regular systems in place to audit the security of our operations with regular drills to test readiness and compliance. Further, bounties of shame should be paid by any member failing compliance
 
-- founders are able to contribute to the project as themselves
+## Operating Activities
 
-Generating information inside the project that can be correlated somehow.
+1. Real life promotion (conferences, videos, friends)
+1. Online Promotion (forums, emails, blogs)
+1. Code commits
+1. Issue posting
+1. TESTING Amazon deployments using serverless.com tooling
+1. PRODUCTION Amazon deployments using serverless.com tooling
+
+the concept of the zero liability company
+only the code matters
+
+[Using vscode](https://code.visualstudio.com/docs/remote/ssh)
 
 Alert levels:
 
@@ -130,10 +135,7 @@ Alert levels:
 1. High value - making money, tax dept and competitors and thieves
 1. Offensive - off AWS, independent, bad things are being done on the network, and we must help enforce them
 
-Checklist:
-
-1. Not possible to be editing a codebase, then git push as another identity
-1. Not possible to login as a cloud identity without using tor
+## Required Items and Tooling
 
 Operating procedures under level 1: Rehearsal
 Traceable items needed:
@@ -165,7 +167,9 @@ IP address
 ![Whonix Workstation](./assets/whonix.jpg)
 ![VSCode SSH](./assets/vscode.png)
 
-Procedure:
+## Procedure
+
+If bringing in an existing codebase, make sure it comes in mangled. To trace attribution, make sure you reference some kind of git tree somewhere, and probably sign something in there. Then you want to get it snapshotted on archive.org and a bunch of other places so it is versioned correctly. Ideally it would automatically peg to the btc blockchain, but we aren’t quite there yet….
 
 1. Ensure bare metal OS is free from any credentials related to any services or compromise, preferably with reinstall
 1. Install base OS software:
@@ -214,18 +218,12 @@ Operational rules:
 1. Set an offensive color theme on torbrowser, so it is immediately clear when it is in use. Try not to use regular browser as this can lead to correlation with you IP and identity
 1. Always sign everything, to prevent fraud
 
-Goals
+Deniability
 
-1. Recreate any identity, and prove previous contribution, with just the keepass db
-1. Not possible to accidentally attempt to push with another identities credentials
-1. Tor gateway shutdown results in no possible pushes to github
-1. Be more resistant to error than a vpn
-1. Friendly developer experience
-1. Rapidly reprovision development environment
+Always need to have layered reasons for how we came across any data we get questioned over. Ideas are:
+Every project out in the public and part of some announcement or mailing list
 
-## Funding
-
-How can your project receive funding, and maintain anonymity ?
+Make info as public as possible with as much traffic on it as possible. Follow a standard with other people following similar goals. The only secrets should be key material.
 
 ## Bastions
 
@@ -239,12 +237,6 @@ Now ideally all this procedure would be hard baked in to the protocol, but since
 https://github.blog/2020-02-20-2019-transparency-report/
 
 Github allows pulling code anonymously, so rely on publication of your repo url, the clone with collaborators thru tor
-
-## Receiving funds
-
-Set up an android based wallet, with full privacy on. These funds will be managed by the central chain
-
-## Bastions
 
 Bastions are isolated networks of operation. There is no cross over between these networks, and no knowledge inside each one of any others. Any bastion breach should not affect any other in any way. They all draw on a common codebase, from the Core. This allows running each corporate venture on an entirely isolated set of infrastructure.
 
@@ -265,14 +257,6 @@ https://ssd.eff.org/en/module/your-security-plan
 Keep the infrastructure hidden - the worst thing that could happen is your site is offline - this is a loss of a potential user, supporter, contributor, or investor. [Uptime under duress](link to dev.to article) is hard
 
 No bastion identities can come in contact with any others. If they need to share code it needs to be via offline means. Leakage from one browsing anothers github repos while logged in is only damaging if github is breached. Always protect the infrastructure.
-
-### Ensuring code equality
-
-Leaks from handwriting - use a diagramming tool like mermaid
-
-## Importing an existing codebase
-
-If bringing in an existing codebase, make sure it comes in mangled. To trace attribution, make sure you reference some kind of git tree somewhere, and probably sign something in there. Then you want to get it snapshotted on archive.org and a bunch of other places so it is versioned correctly. Ideally it would automatically peg to the btc blockchain, but we aren’t quite there yet….
 
 ## Activity zones
 
@@ -299,7 +283,7 @@ Types of identity:
 1. Dev projects might try to make data requests out to other sites - none of our sites should ever request anything from outside the current realm
 1. Vscode might follow links in code base - turn this off by disabling any kind of vscode link detection in user wide settings
 1. opened cloud anonymous account url in clearnet after clicking on url in keepass and having it open automatically in chrome, not behind tor
-
+1. Generating information inside the project that can be correlated somehow.
 1. Credit card acquisition
    1. Paying with electronic means
    1. Paying with unwashed crypto
@@ -322,25 +306,30 @@ Types of identity:
    1. Generating info, like pictures, or names, then using that info in projects
 1. Plugins for tooling - anything that sends telemetry back to some owner
    1. License key information for tooling can be identifying
+      Leaks from handwriting - use a diagramming tool like mermaid
 
-## Deniability
+## Receiving Funding
 
-Always need to have layered reasons for how we came across any data we get questioned over. Ideas are:
-Every project out in the public and part of some announcement or mailing list
+How can your project receive funding, and maintain anonymity ?
+Set up an android based wallet, with full privacy on. These funds will be managed by the central chain
+You have to go thru stages:
 
-Make info as public as possible with as much traffic on it as possible. Follow a standard with other people following similar goals. The only secrets should be key material.
+- burning / investing
+- minor funding received - first signal might be useful
+- income
+- external code contribution
+- profitability
+- scale
 
-## Ideas for graphical modelling
+## Shutting Down
 
-1. Linkage / fulcrums - sites like protonmail that could link multiple identities together
-1. Equivalent damages - if having different identities would end up as the same, then no point. Eg: a blogging identity and a coding identity - compromise from subpoena is the same for either, so no strength in separation
-1. Lineage breaking points, where anybody could have picked up the info, like NPM publishing, github forking
+If things haven't worked out, or you have been compromised, then destroying the key material should be all that is required to separate yourself from the project. You may wish to also reset all your machines to factory default. To help your peers, leaving your repositories open and available would be appreciated, and if you can identify the source of your leak, please let others know and suggest updates to the Operating Model, so that all might benefit.
 
-# Found a typo?
+## Contributing to this Article
 
-If you've found a typo, a sentence that could be improved or anything else that should be updated on this blog post, you can access it through a git repository and make a pull request. Instead of posting a comment, please go directly to <REPO URL> and open a new pull request with your changes.
+If you've found an error, a typo, a sentence that could be improved or anything else that should be updated on this blog post, you can access it through its [Github repository](https://github.com/dreamcatcher-tech/dev.to/blob/master/blog-posts/anonymous-coding/anonymous-coding.md). Please open a pull request or an issue with the changes you want.
 
-```
+```ascii
 -----BEGIN PGP SIGNATURE-----
 
 iNUEABYKAH0WIQSW5v+GQnhyZPP31NRrIU8mdTPWvwUCX2u6518UgAAAAAAuAChp
