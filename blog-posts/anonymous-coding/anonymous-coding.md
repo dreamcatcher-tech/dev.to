@@ -34,6 +34,21 @@ Things you migth want to be protected from:
 - unpopularity
 - discimination
 
+typically correlation is done using credit cards or sim cards. These are crucial pieces of identity to secure anonymously.
+
+Have a separate namespace. Fork the project, rename the terms of the dictionary, and use these to talk with trusted collaborators.
+
+Our first action is potentially our most compromising one, and we need to approach this with formality, and have regular systems in place to audit the security of our operations with regular drills to test readiness and compliance. Further, bounties of shame should be paid by any member failing compliance
+
+Activities:
+
+1. Real life promotion (conferences, videos, friends)
+1. Online Promotion (forums, emails, blogs)
+1. Code commits
+1. Issue posting
+1. TESTING Amazon deployments using serverless.com tooling
+1. PRODUCTION Amazon deployments using serverless.com tooling
+
 the concept of the zero liability company
 only the code matters
 
@@ -67,17 +82,51 @@ Why:
 
 1. For Resilience: After being completely burned being able to reboot the project in a matter of days with only the core CMD keys is essential. We should be able to do this in the face of censorship, intrusion, or hardware faults
 
+As global activity spreads, the chances of falling afoul of some regulation somewhere approaches certainty, with the only true protection being anonymity.
+
 Threat vectors:
 
 - DMCA takedown
 - Patent infringement
 - Tax Collectors
-- Securities commission
+- Securities commissions across the world
+- Peers
+- Civil lawsuits - those originating from private individuals and companies. These always have a cost even if frivolous
+- Law Enforcement
+- Tax collectors
+- Violence / War
+- Govt raid - wiretap
+- Services subpoena - Github - Aws - Protonmail - Serverless.com
+- Service terms (aws decides we are unwelcome)
+- Malware compromise
+- Enthusiast investigation
+- Friend exposure
+- DDoS
 
 Release checklist:
 
 1. Both passed an operational audit
 1. Check every code file for restricted information
+
+Roadmap:
+Rehearsal
+Done when: founders have passed each others audits based on an agreed model, and has been operating for 4 weeks
+Public release
+Growth
+Done when: code contributions and tickets from people we don’t know
+Designed to stay under the radar from legal threats long enough to grow
+Best protection is popularity
+Consolidate: begin legal claims to assets and outstanding bills, etc
+Clear operation
+
+- founders are able to contribute to the project as themselves
+
+Alert levels:
+
+1. Initial - no risk due to obscurity, plausible deniability to weak adversaries
+1. Operational - network is up, growth is occurring, value below 100mm
+1. High value - making money, tax dept and competitors and thieves
+1. Offensive - off AWS, independent, bad things are being done on the network, and we must help enforce them
 
 Checklist:
 
@@ -218,6 +267,49 @@ No bastion identities can come in contact with any others. If they need to share
 ### Ensuring code equality
 
 Leaks from handwriting - use a diagramming tool like mermaid
+
+## Importing an existing codebase
+
+If bringing in an existing codebase, make sure it comes in mangled. To trace attribution, make sure you reference some kind of git tree somewhere, and probably sign something in there. Then you want to get it snapshotted on archive.org and a bunch of other places so it is versioned correctly. Ideally it would automatically peg to the btc blockchain, but we aren’t quite there yet….
+
+## Activity zones
+
+1. Personal: whatsapp, jitsi, anything
+   Must at least be encrypted
+1. Promotion: public material
+1. Testing: used to test applications, deployments
+   Must secure IP addresses
+   Breach is non fatal
+1. Production: public versions of sites, governance
+   Any identity breach is fatal
+
+Types of identity:
+
+1. IP address
+1. Machine
+1. PGP key
+1. Chain key
+
+## Pitfalls
+
+1. Urls in keepass accounts that when double clicked open protected urls in browser
+1. Linked cloud accounts, that if one cloud service is accessed on clearnet, other might be able to trace back
+1. Dev projects might try to make data requests out to other sites - none of our sites should ever request anything from outside the current realm
+1. Vscode might follow links in code base - turn this off by disabling any kind of vscode link detection in user wide settings
+1. opened cloud anonymous account url in clearnet after clicking on url in keepass and having it open automatically in chrome, not behind tor
+
+## Deniability
+
+Always need to have layered reasons for how we came across any data we get questioned over. Ideas are:
+Every project out in the public and part of some announcement or mailing list
+
+Make info as public as possible with as much traffic on it as possible. Follow a standard with other people following similar goals. The only secrets should be key material.
+
+## Ideas for graphical modelling
+
+1. Linkage / fulcrums - sites like protonmail that could link multiple identities together
+1. Equivalent damages - if having different identities would end up as the same, then no point. Eg: a blogging identity and a coding identity - compromise from subpoena is the same for either, so no strength in separation
+1. Lineage breaking points, where anybody could have picked up the info, like NPM publishing, github forking
 
 # Found a typo?
 

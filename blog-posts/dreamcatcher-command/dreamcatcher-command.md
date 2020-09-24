@@ -10,6 +10,10 @@ canonical_url:
 
 We support a higher entity - dreamcatcher command. These are the ideals that command strives for.
 
+DRECMD is an oracle, and causes side effects in an otherwise deterministic system.
+
+This idea arose from a group of mathematicians based at CERN and was developed initially in a loose way. The idea was then further developed by that group into the concepts behind DC. The current codebase brings together these ideas. This is one implementation of those concepts; there may be better ways to do this - this is version one and may well be replaced. The concepts however are the important part.
+
 Published in service of, but without the endorsement of Dreamcatcher Command, whose public key is:
 
 ```
