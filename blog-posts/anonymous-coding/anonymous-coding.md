@@ -121,6 +121,8 @@ Clear operation
 
 - founders are able to contribute to the project as themselves
 
+Generating information inside the project that can be correlated somehow.
+
 Alert levels:
 
 1. Initial - no risk due to obscurity, plausible deniability to weak adversaries
@@ -297,6 +299,29 @@ Types of identity:
 1. Dev projects might try to make data requests out to other sites - none of our sites should ever request anything from outside the current realm
 1. Vscode might follow links in code base - turn this off by disabling any kind of vscode link detection in user wide settings
 1. opened cloud anonymous account url in clearnet after clicking on url in keepass and having it open automatically in chrome, not behind tor
+
+1. Credit card acquisition
+   1. Paying with electronic means
+   1. Paying with unwashed crypto
+   1. Paying with cash from a bank or foreign exchange branch
+   1. Cameras on the purchase spot
+   1. Number plate from cameras on purchase spot
+   1. Google location tracking on phone during purchase
+   1. Recognized by shop merchant
+   1. Using card too soon after acquisition
+   1. Recommended best practice:
+      1. Purchase something from a bakery to break the cash
+      1. Use small shops away from city centres
+      1. Wear sunglasses, a hood, a mask
+      1. Turn off phone before entering
+      1. Buy local, but not somewhere frequent, so being in the area isn’t correlated
+1. Identity correlation
+   1. Entering password for another account in relation to another account
+   1. Accessing a rare page on clearnet, then same page shortly after on tor
+   1. Accessing a rare page signed in as a github user, then visiting same page signed in as protected identity over tor
+   1. Generating info, like pictures, or names, then using that info in projects
+1. Plugins for tooling - anything that sends telemetry back to some owner
+   1. License key information for tooling can be identifying
 
 ## Deniability
 
