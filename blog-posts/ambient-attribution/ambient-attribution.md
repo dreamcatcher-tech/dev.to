@@ -1,7 +1,7 @@
 ---
 published: false
 title: "Ambient Attribution"
-cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg"
+cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/ambient-attribution/assets/time-fairness.jpg"
 description: ""
 tags: infosec, privacy, tor, blockchain
 series:

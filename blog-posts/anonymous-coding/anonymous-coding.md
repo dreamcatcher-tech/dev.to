@@ -38,6 +38,15 @@ We and others subscribe to the ideals of the FSF, but a natural consequence of f
 
 We are seeking with the interblock project to create a tool that makes suppression resistance easy, and hopefully leads on to being supression proof, but to get there we have to practical, and use the methods available to us at the present technology level.
 
+Four freedoms:
+
+1. asd
+1. asdf
+1. asdf
+1. asdf
+
+Adhering to these freedoms, one can rapidly come under code production threat, most commonly from a lack of resources that can be extracted from forcing your users to pay. This contraint on resources is manageable if constant, but the project can fatally end if the resources come under shock load, such as a patent infringement case, such as (link to EFF case). A social justice campaign can be equally as devastating.
+
 ## Goals of an Operating Model
 
 Our model is based on a mythical project operator, called Command, that represents the virtualized interests... Command is the identity to be protected above all else.
@@ -194,9 +203,12 @@ If bringing in an existing codebase, make sure it comes in mangled. To trace att
 1. Create user account with same name as the fake identity
 1. Follow instructions to set up ssh based editing in vscode: https://code.visualstudio.com/docs/remote/ssh-tutorial
 1. Set up node with this command:
-   ````export SHELL=bash
-   curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash```
-   ````
+
+   ```
+   export SHELL=bash
+   curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+   ```
+
 1. Create ssh key and add to github
 1. Create gpg key for signing commits, and add to github
    1. gpg --full-generate-key --expert (then choose ECC and ECC, then curve 25519, as this makes shorter signatures)
