@@ -1,7 +1,7 @@
 ---
 published: false
 title: "Dreamcatcher Command"
-cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg"
+cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/dreamcatcher-command/assets/command.jpg"
 description: "Description of the article"
 tags: infosec, privacy, tor, blockchain
 series:
