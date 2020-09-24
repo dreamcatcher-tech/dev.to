@@ -16,7 +16,7 @@ Building customer trust
 
 The only way to protect the privacy of your customers is to ensure they remain anoymous.
 
-[Current Labour Flows](./assets/economy.svg)
+[Current Labour Flows](./assets/economy.png)
 
 ### Outsourcing your identity management requirements.
 
