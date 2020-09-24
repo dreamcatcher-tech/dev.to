@@ -2,5 +2,13 @@
   {
     "id": 437182,
     "relativePathToArticle": "./blog-posts/anonymous-coding/blog.md"
+  },
+  {
+    "id": 464230,
+    "relativePathToArticle": "./blog-posts/zero-liability-co/zero-liability-co.md"
+  },
+  {
+    "id": 464236,
+    "relativePathToArticle": "./blog-posts/uptime-under-duress/uptime-under-duress.md"
   }
 ]
