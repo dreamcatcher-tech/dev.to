@@ -10,6 +10,11 @@ canonical_url:
 
 _"Mirror mirror, on the wall, who is the fairest of them all ?"_
 
+Contents
+
+1. Example project funding of Interblock
+1. Example project funding of DOS
+
 Ambient Attribution
 
 Software companies make up trillions of dollars on the stockmarket, but
@@ -35,6 +40,8 @@ zero liability, zero friction, never credit.
 credit being given by the worker, acting as a bank.
 [graph showing decreasing overall cost]
 
+Work for sweat ![](./assets/sweat-equity.jpg)
+
 decreasing activation cost
 longer it survives, the better the quality
 a good programmer on their day
@@ -43,3 +50,30 @@ can be called to account years after your coding
 
 how much reward is fair ?
 surmise there is a single fair answer.
+self witness, shared witness, unto others as they unto you, wisdom of crowds
+image should be the same looking back, no different.
+how they see you should be same as how you see them.
+this is shared vision - aka reality.
+fairness is something that looks the same from all sides
+
+What is fair payment ?
+Depend on each situation.
+Depends on the utility gained.
+
+## Example: Funding Interblock
+
+What is the prize ?
+
+### What is the product ?
+
+Equity stake in the upside.
+Consumers of the product are politly asked for fair payment
+
+Types of input:
+
+1. Direct funds used by project command
+1. Code contribution
+1. Direct funded code contribution
+1. Early customer
+
+We hope these models of labour, if successful, can have equivalents in the physical product world.
