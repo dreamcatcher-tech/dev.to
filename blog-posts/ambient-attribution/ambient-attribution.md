@@ -77,3 +77,15 @@ Types of input:
 1. Early customer
 
 We hope these models of labour, if successful, can have equivalents in the physical product world.
+
+## Restrictions on investment
+
+Any projects that we endorse must follow the following rules, which are automated:
+
+1. Investors must prove they know what the project is about
+1. Investors must be able to afford to lose their investment
+1. Projects must have an earnest goal
+
+We are unable to register many of our projects with the SEC due to our requirements to stay anonymous. However we support the spirit of the SEC regulations, and we aim to exceed their intention.
+
+To invest in a software project, you must have made a code commit of more than x weighted value, which signals that you know what the project is about, and you have contributed enough to be part of the enterprise - a worker, as it were - relying on the efforts of others and yourself to show return.
