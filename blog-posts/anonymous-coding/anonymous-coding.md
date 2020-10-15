@@ -219,10 +219,15 @@ If bringing in an existing codebase, make sure it comes in mangled. To trace att
    1. cat ~/.ssh/id_rsa
 1. Set up 2FA on github and install oathtool:
 
-```
+   ```
    sudo apt install oathtool
    oathtool -b --totp (code from github)
-```
+   ```
+
+1. use visudo to add give all dev group members ability to run whonixcheck:
+   ```
+   %dev    ALL=NOPASSWD:/usr/bin/whonixcheck
+   ```
 
 Operational rules:
 
