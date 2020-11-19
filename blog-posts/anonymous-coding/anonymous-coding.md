@@ -228,6 +228,27 @@ If bringing in an existing codebase, make sure it comes in mangled. To trace att
    ```
    %dev    ALL=NOPASSWD:/usr/bin/whonixcheck
    ```
+1. To access https://client.aragon.org in the TOR browser, open about:config and turn off "privacy.resistFingerprinting" - be sure to turn it back on again when not using aragon. An issue has been filed for this problem: https://github.com/aragon/client/issues/1529
+
+### Funding the Aragon Org
+
+1. Using TOR set up Fortmatic wallet using an anonymous email address, and get the Ethereum address
+1. Get some fiat into an exchange, such as binance, that allows XMR withdrawls
+1. Withdraw XMR to CakeWallet - an andoid based XMR lightwallet
+   1. binance knows your kyc info, so they know what XMR address they sent to
+1. Send from CakeWallet to a new account on http://xmrwalletdatuxds.onion/#/login.html using the onion address
+   1. CakeWallet gave away your IP address to the XMR network, but it broke the link back to binance
+1. Go to MorphToken and set up an exchange to accept XMR and morph into ETH and sent to your Fortmatic address
+1. Send from xmrwallet to the morphtoken address, and await the receipt of ETH in the wallet
+   1. xmrwallet hid your IP address from xmrnetwork
+
+To map back your KYC info at binance or discover your IP address would require:
+
+1. XMR network snooped your IP when you sent to xmrwallet, then xmrwallet revealed you used morphtoken, which then revealed you exchanged for the ETH used to start the org.
+1. Without the CakeWallet step, all that would be required is for binance, xmrwallet, morphtoken to all be compelled to share their transaction records, to link back to your KYC info at binance.
+1. With CakeWallet, also need to compromise either CakeWallet, or the xmrnetwork, and then get your IP address, then link that IP address to your behaviour. So Cakewallet breaks the transactional links, xmrwallet breaks the IP address link. Or you could use a full XMR node over TOR, but this is a pain.
+
+The trouble is that this is lossy, and a low loss method is required for the bulk of the funding coming in.
 
 Operational rules:
 
