@@ -1,20 +1,28 @@
 ---
 published: false
-title: "Dreamcatcher Command"
-cover_image: "https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/dreamcatcher-command/assets/command.jpg"
-description: "Description of the article"
+title: 'Dreamcatcher Command'
+cover_image: 'https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/dreamcatcher-command/assets/command.jpg'
+description: 'Description of the article'
 tags: infosec, privacy, tor, blockchain
 series:
 canonical_url:
 ---
 
-We support a higher entity - dreamcatcher command. These are the ideals that command strives for.
+We support a higher entity - dreamcatcher command. These are the ideals that
+command strives for.
 
-DRECMD is an oracle, and causes side effects in an otherwise deterministic system.
+DRECMD is an oracle, and causes side effects in an otherwise deterministic
+system.
 
-This idea arose from a group of mathematicians based at CERN and was developed initially in a loose way. The idea was then further developed by that group into the concepts behind DC. The current codebase brings together these ideas. This is one implementation of those concepts; there may be better ways to do this - this is version one and may well be replaced. The concepts however are the important part.
+This idea arose from a group of mathematicians based at CERN and was developed
+initially in a loose way. The idea was then further developed by that group into
+the concepts behind DC. The current codebase brings together these ideas. This
+is one implementation of those concepts; there may be better ways to do this -
+this is version one and may well be replaced. The concepts however are the
+important part.
 
-Published in service of, but without the endorsement of Dreamcatcher Command, whose public key is:
+Published in service of, but without the endorsement of Dreamcatcher Command,
+whose public key is:
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
