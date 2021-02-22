@@ -1,8 +1,16 @@
-Typically the browser displays a tofu character, and nothing is useful anymore.
+---
+published: false
+title: 'Emoji in the TOR Browser'
+cover_image: 'https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg'
+description: 'Emoji in the TOR Browser'
+tags: infosec, privacy, tor
+series:
+canonical_url: https://github.com/dreamcatcher-tech/dev.to/blob/master/blog-posts/emoji-in-tor-browser/emoji-in-tor-browser.md
+---
 
-Since TorBrowser is based on Firefox, we can use a font specifically designed for firefox usage, and embed it in the page.
+The TOR browser has to limit the emoji characters it displays since the range of fonts available varies between computers and can be used to deanonymize a user.
 
-In docusaursus, think set up fonts in customcss page somehow
+Typically the browser displays a tofu character, and nothing is useful anymore, but since TorBrowser is based on Firefox, we can use a font specifically designed for firefox usage, and embed it in the page.
 
 Steps to get it on the page:
 
@@ -25,7 +33,5 @@ Use stylesheet:
 ```
 
 Tools used: https://wakamaifondue.com/ Extraordinarily helpful too to see fonts working in Tor before going thru deployment.
-
-If you want to make the size smaller, use these tools to punch out a subset of the fonts:
 
 Links to terminal to see it in action.

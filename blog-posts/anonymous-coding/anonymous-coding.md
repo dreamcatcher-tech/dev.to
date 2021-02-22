@@ -44,7 +44,7 @@ For reference, the four freedoms of open source software are:
 
 Adhering to these freedoms, one can rapidly come under code production threat if established closed source corporations need to defend themselves in some way. This post deals with the specific case of making open source software, with transparent operations, detached from any identifying information about the contributors.
 
-## Value of anonymous code production:
+## Value of anonymous code production
 
 1. For Growth: Anonymous contribution makes it hard to intermingle opinions about the authors from a particular idea or embodiment, allowing a purer form of discourse and evaluation to take place. There can be no discrimination of contributions if the people making them do not know who each other are.
 
