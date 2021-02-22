@@ -46,7 +46,9 @@ apps. It could be that email is the simplest form of such a thing, as it really
 just does transmission and receiving. More complex and more useful interactions
 such as long form stateful collaborations have yet to see such an exlosion, but
 git offers a glimpse of what that could be like. If only git came with its own
-independent version of github wrapped around every repo that was created.  Its components lack the resilience and internal integrity necessary to travel thru many inverted instances unaltered.
+independent version of github wrapped around every repo that was created. Its
+components lack the resilience and internal integrity necessary to travel thru
+many inverted instances unaltered.
 
 The first inverted app is the dreamcatcher. Each idea is free floating, owned by
 its creator and optionally private. Then projects are created - themselves a
@@ -88,3 +90,11 @@ where needed. Almost all blockchains could currently be classed as perverted
 apps - proporting to offer freedom, but really having no more structure than a
 public company with central product and distributed public shareholdings. These
 operations have no future.
+
+an inverted exchange is different to an exchange on a blockchain. True inversion
+means that any partipant can come and go if the possess commodity electronics.
+Ethereum for example you need to have ETH, then you need assets on the chain -
+the list of barriers goes on and on. An inverted exchange would let people peer
+with one another and find the best prices. Yes there would appear aggregators,
+but these would be assistants, and easily replaced at any time they stop being
+useful.

@@ -22,3 +22,5 @@ asking for fairness, you ought act fairly too
     Let people make permanent statements with their spending of money
 
 High precision data deflates bubbles
+
+We would propose then, a novel payments provider named BrightPay Inc. which offers low cost payment processing solutions for businesses and consumers by converting payment records to blockchain for permanence and enrichment thru optional collaboration of information.  The cost is kept low by the software and labour components being outsourced to the Dreamcatcher Network and all operating expenditure and intention being transparent.

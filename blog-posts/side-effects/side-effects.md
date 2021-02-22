@@ -2,7 +2,7 @@
 published: false
 title: 'Side Effect IO for Blockchains'
 cover_image: 'https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/side-effects/assets/mixing-droplet.jpg'
-description: 'Description of the article'
+description: Description of the article
 tags: infosec, privacy, tor, blockchain
 series:
 canonical_url:

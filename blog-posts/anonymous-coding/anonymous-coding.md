@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Threat modelling for hunted coders'
 cover_image: 'https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg'
 description:
@@ -16,117 +16,103 @@ _“It’s only funny until someone loses an identity”_
 **Contents**
 
 1. [Coding Under Threat](#coding-under-threat)
+1. [Value of anonymous code production](#value-of-anonymous-code-production)
 1. [Goals of an Operating Model](#goals-of-an-operating-model)
+1. [Actors in the model](actors-in-the-model)
 1. [Threat Types](#threat-types)
-1. [Operating Activities](#operating-activities)
 1. [Required Items and Tooling](#required-items-and-tooling)
-1. [Procedure](#procedure)
-1. [Bastions](#bastions)
+1. [Architecture](#architecture)
+1. [Getting a burner number](getting-a-burner-number)
+1. [Importing existing code](importing-existing-code)
+1. [Workstation Procedure](#workstation-procedure)
+1. [AWS Procedure](#aws-procedure)
 1. [Pitfalls](#pitfalls)
-1. [Receiving Funding](#receiving-funding)
+1. [Accessing the Aragon DAO](#accessing-the-aragon-dao)
+1. [Deniability](#deniability)
+1. [Bastions](#bastions)
+1. [Cashing out to fiat](#cashing-out-to-fiat)
 1. [Shutting Down](#shutting-down)
 1. [Contributing to this Article](#contributing-to-this-article)
 
 ## Coding Under Threat
 
-Deployed software endures various threats during its operating life, but seldom
-is the threat to the coding operation itself considered But we don't so often
-consider threat to the coding operation itself. We think oftern about the
-security of our applications, but not so often about the security of ourselves.
-The ability to keep coding is essential to your project - more important than
-its present features.
+Deployed software must endure various threats during its operating life, but
+seldom is the threat to the coding operation itself considered. We think often
+about the security of our applications, but not so often about the security of
+ourselves. The ability to keep coding is foundational to every project. Project
+endurance can be damaged by many things, and maintaining a basic level of
+anonymity provides a very low cost way to handle many common endurance attacks.
 
-One persons hero is another persons terrorist. The
+For reference, the Four freedoms of open source software are:
 
-This post is not here to at all judge the ethics of a specific befaviour, but to
-... the right of freedom to code. Freedom software
+1. The freedom to run the program as you wish, for any purpose.
+1. The freedom to study how the program works, and change it so it does your
+   computing as you wish.
+1. The freedom to redistribute copies so you can help your neighbor.
+1. The freedom to distribute copies of your modified versions to others.
 
-We and others subscribe to the ideals of the FSF, but a natural consequence of
-freedom is that some forms of code become hunted. We operate under such a model,
-and so offer here a model for survival under suppression.
+Adhering to these freedoms, one can rapidly come under code production threat if
+established closed source corporations need to defend themselves in some way.
+This post deals with the specific case of making open source software, with
+transparent operations, detached from any identifying information about the
+contributors.
 
-We are seeking with the interblock project to create a tool that makes
-suppression resistance easy, and hopefully leads on to being supression proof,
-but to get there we have to practical, and use the methods available to us at
-the present technology level.
+## Value of anonymous code production:
 
-Four freedoms:
+1. For Growth: Anonymous contribution makes it hard to intermingle opinions
+   about the authors from a particular idea or embodiment, allowing a purer form
+   of discourse and evaluation to take place. There can be no discrimination of
+   contributions if the people making them do not know who each other are.
 
-1. asd
-1. asdf
-1. asdf
-1. asdf
+1. For Safety: Getting sued is time wasting and also costly. Worse, any
+   unresolved court cases will stunt growth as people await the outcome, or are
+   scared off by bullying tactics of attackers. As global activity spreads, the
+   chances of falling afoul of some regulation somewhere approaches certainty,
+   with the only true protection being anonymity.
 
-Adhering to these freedoms, one can rapidly come under code production threat,
-most commonly from a lack of resources that can be extracted from forcing your
-users to pay. This contraint on resources is manageable if constant, but the
-project can fatally end if the resources come under shock load, such as a patent
-infringement case, such as (link to EFF case). A social justice campaign can be
-equally as devastating.
+1. For maximizing investment: No lawyers fees, no company filings, no
+   administrative costs whatsoever
+
+1. For Resilience: After being completely burned, one person should be able to
+   reboot the project in a matter of days with only the core keys. This should
+   be possible in the face of censorship, intrusion, or even benign hardware
+   faults
 
 ## Goals of an Operating Model
 
-Our model is based on a mythical project operator, called Command, that
-represents the virtualized interests... Command is the identity to be protected
-above all else. Then there are two types of identity we operate under -
-transient, and stable.
+Our model is based on a theoretical project operator, called Command, that
+represents the virtualized interests of the driving group behind the project. In
+this model Command is the identity to be protected above all else - like the
+king in a chess game. Command is a stable identity, as opposed to transient, and
+relies on the accumulation of reputation to enhance promotion and recruitment to
+the project. The goals of this model are:
 
-Why:
-
-1. For Growth: The reason that we want to be anonymous is that Command needs to
-   be a black box, and as soon as people are associated with her, Command will
-   be perceived with bias, which will limit growth.
-
-- Vacant Throne projection with one or two, or several thousand people
-- Founders can be themselves in service of the dreamcatcher, without comprising
-  Command, or themselves and their financial positions
-
-1. For Safety: We’d like to not get sued. This is time wasting but also costly,
-   and unresolved court cases will stunt growth
-
-- Reasonable Doubt: plausible deniability to slow down legal action.
-- Sued for IP infringement from companies past, or companies in parallel as yet
-  unknown
-- Sued by securities commission for selling unregistered securities
-- We do not want to pass on patent rights in case we want to claim them later
-
-1. For Wealth: We’d like to not pay any tax or be otherwise stolen from, to
-   redirect all earnings into growth, whilst claiming irrefutable attribution
-   much later, without being attacked while we are young
-
-1. For Resilience: After being completely burned being able to reboot the
-   project in a matter of days with only the core CMD keys is essential. We
-   should be able to do this in the face of censorship, intrusion, or hardware
-   faults
-
-As global activity spreads, the chances of falling afoul of some regulation
-somewhere approaches certainty, with the only true protection being anonymity.
-
-1. Not possible to be editing a codebase, then git push as another identity
-1. Not possible to login as a cloud identity without using tor
-
-Goals
-
-1. Recreate any identity, and prove previous contribution, with just the keepass
-   db
-1. Not possible to accidentally attempt to push with another identities
-   credentials
+1. To be able to recreate any identity, and prove previous contribution, with
+   just the key material
+1. Cannot be possible to accidentally attempt to push to cloud with the wrong
+   identities or credentials
 1. Tor gateway shutdown results in no possible pushes to github
-1. Be more resistant to error than a vpn
+1. Be more resistant to human error than a vpn
 1. Friendly developer experience
-1. Rapidly reprovision development environment
+1. Rapidly reprovisionable development environment
 
-Ensuring code equality
+## Actors in the model
+
+1. Command
+1. Contributors
+1. Operators
+1. Users
+1. Investors
+1. Promoters
 
 ## Threat Types
 
-Things you migth want to be protected from:
+Things you might want to be protected from:
 
-- greed
-- fights that you can't deal with right now
+- greed (your own, and others around you)
+- costly fights
 - reputational harm
 - project reputational harm
-- patent law
 - government
 - tax
 - piracy
@@ -138,94 +124,100 @@ Things you migth want to be protected from:
 - Securities commissions across the world
 - Peers
 - Civil lawsuits - those originating from private individuals and companies.
-  These always have a cost even if frivolous
 - Law Enforcement
-- Tax collectors
 - Violence / War
-- Govt raid - wiretap
+- Govt raid or wiretap
 - Services subpoena - Github - Aws - Protonmail - Serverless.com
-- Service terms (aws decides we are unwelcome)
+- Service terms (eg: AWS decides you are unwelcome)
 - Malware compromise
 - Enthusiast investigation
-- Friend exposure
+- Friends and family exposure
+- Employer exposure
 - DDoS
 
-typically correlation is done using credit cards or sim cards. These are crucial
-pieces of identity to secure anonymously.
-
-Have a separate namespace. Fork the project, rename the terms of the dictionary,
-and use these to talk with trusted collaborators.
-
-Our first action is potentially our most compromising one, and we need to
-approach this with formality, and have regular systems in place to audit the
-security of our operations with regular drills to test readiness and compliance.
-Further, bounties of shame should be paid by any member failing compliance
-
-## Operating Activities
-
-1. Real life promotion (conferences, videos, friends)
-1. Online Promotion (forums, emails, blogs)
-1. Code commits
-1. Issue posting
-1. TESTING Amazon deployments using serverless.com tooling
-1. PRODUCTION Amazon deployments using serverless.com tooling
-
-the concept of the zero liability company only the code matters
-
-[Using vscode](https://code.visualstudio.com/docs/remote/ssh)
-
-Alert levels:
-
-1. Initial - no risk due to obscurity, plausible deniability to weak adversaries
-1. Operational - network is up, growth is occurring, value below 100mm
-1. High value - making money, tax dept and competitors and thieves
-1. Offensive - off AWS, independent, bad things are being done on the network,
-   and we must help enforce them
+Typically correlation is done using IP addresses, credit cards, and cell phone
+sim cards. These are crucial pieces of identity to secure anonymously.
 
 ## Required Items and Tooling
 
-Operating procedures under level 1: Rehearsal Traceable items needed: Burner
-credit card Burner cell phone number Bare metal machine with trusted environment
-installed Cloud services used: Github private repos Protonmail Google docs Miro
-whiteboards AWS Protected anonymous asset: Blockchain codebase Dreamcatcher
-codebase Dreamcatcher Command identities
+Traceable items needed:
 
-Controlling material kept on: Keepass GPG keys per identity Activities Software
-Development Command strategy Infrastructure operation Knowledge restrictions:
-Forbidden: IP address
+1. Ether cryptocurrency - about $150USD worth
+1. Bare metal machine with a trusted environment - eg: a fresh install
 
-![Whonix Workstation](./assets/whonix.jpg) ![VSCode SSH](./assets/vscode.png)
+Cloud services used:
 
-## Procedure
+1. Github private repos
+1. Protonmail
+1. Mega for cloud backup
 
-If bringing in an existing codebase, make sure it comes in mangled. To trace
-attribution, make sure you reference some kind of git tree somewhere, and
-probably sign something in there. Then you want to get it snapshotted on
+Key material kept on:
+
+1. Keepass GPG keys per identity
+
+## Architecture
+
+We are using the Whonix workstation in conjunction with VSCode ssh tunneling to
+have the richness of VSCode development, the speed of a local development
+environment, as well as obfuscation of IP addresses by tunneling thru TOR. This
+is how Whonix guarantees nothing can escape the workstation VM:
+
+<img src="./assets/whonix.jpg" width="640"/>
+
+This is how we can use VSCode on our local machine while running the development
+environment within the Whonix protective ring:
+
+<img src="./assets/vscode.png" width="640"/>
+
+All browsing needs to be done with the TOR browser
+
+## Getting a burner number
+
+First you need anonymous money. Send the ETH to the mixer at
+[Tornado.cash](https://medium.com/@tornado.cash/introducing-private-transactions-on-ethereum-now-42ee915babe0).
+Then use the output funds to purchase a temporary cell phone number from
+[crypton.sh](http://cryptonx6nsmspsnpicuihgmbbz3qvro4na35od3eht4vojdo7glm6yd.onion/).
+Use some more of the money to purchase an anonymous credit card from
+[Ezzo](https://ezzocard.com/how-to-pay) - this will be needed to host on AWS.
+
+## Importing existing code
+
+If bringing in an existing codebase, make sure it comes in mangled so that the
+initial commit does not simply map to the last commit of some other repository.
+To trace attribution, make sure you reference some kind of git tree somewhere,
+and probably sign something in there. Then you want to get it snapshotted on
 archive.org and a bunch of other places so it is versioned correctly. Ideally it
 would automatically peg to the btc blockchain, but we aren’t quite there yet….
+
+## Workstation Procedure
 
 1. Ensure bare metal OS is free from any credentials related to any services or
    compromise, preferably with reinstall
 1. Install base OS software:
+
    1. virtualbox, keepass, putty, vscode, torbrowser
+
 1. Create name for identitiy, and create protonmail and github accounts
-   1. Use TOR to access namegen
-   1. If creating aws account, use burner credit card
-   1. If need sms number for protonmail, use burner number in burner phone
-      device
+   1. Use TOR to access namegen webpages such as
+      https://randomnames.herokuapp.com/# in order to get a completely random
+      name. Or you could just make one up...
+   1. Set up a protonmail account, and use the burner number as verification, or
+      pay the $5USD donation fee if you purchased a burner credit card.
+   1. Set up a github account using this email account.
    1. Github captcha may require about:config in the Firefox address bar and
       find security.csp.enable and set it to false, and or use the audio captcha
-      at signin
+      at signin, or else you can't use the tor browser to create the account
 1. Install whonix workstation cli version from
    https://www.whonix.org/wiki/VirtualBox/CLI
-   1. Add a second host only adapter to the workstation vm
+1. Add a second host only adapter to the workstation vm
 1. Install software on whonix workstation:
-   1. sudo apt install git openssh-server unzip oathtool
+   `sudo apt install git openssh-server unzip oathtool`
 1. Edit file: /etc/whonix_firewall.d/50_user.conf by adding the line:
-   EXTERNAL_OPEN_PORTS+=" 22 "
+   `EXTERNAL_OPEN_PORTS+=" 22 "`
 1. Change the base user password
 1. Add following lines to /etc/network/interfaces.d/30_non-qubes-whonix
-   ```auto eth1
+   ```
+   auto eth1
    iface eth1 inet static
        address 192.168.56.101
        netmask 255.255.255.0
@@ -242,21 +234,19 @@ would automatically peg to the btc blockchain, but we aren’t quite there yet�
 
 1. Create ssh key and add to github
 1. Create gpg key for signing commits, and add to github
-   1. gpg --full-generate-key --expert (then choose ECC and ECC, then curve
+   1. `gpg --full-generate-key --expert` (then choose ECC and ECC, then curve
       25519, as this makes shorter signatures)
    1. Config git using
       https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification
-   1. git config --global commit.gpgsign true
+   1. `git config --global commit.gpgsign true`
 1. Save the gpg private key and ssh private key in string fields in keepass
-   1. gpg --export-secret-key --armor
-   1. cat ~/.ssh/id_rsa
+   1. `gpg --export-secret-key --armor`
+   1. `cat ~/.ssh/id_rsa`
 1. Set up 2FA on github and install oathtool:
-
    ```
    sudo apt install oathtool
    oathtool -b --totp (code from github)
    ```
-
 1. use visudo to add give all dev group members ability to run whonixcheck:
    ```
    %dev    ALL=NOPASSWD:/usr/bin/whonixcheck
@@ -265,59 +255,107 @@ would automatically peg to the btc blockchain, but we aren’t quite there yet�
    turn off "privacy.resistFingerprinting" - be sure to turn it back on again
    when not using aragon. An issue has been filed for this problem:
    https://github.com/aragon/client/issues/1529
-
-### Funding the Aragon Org
-
-1. Using TOR set up Fortmatic wallet using an anonymous email address, and get
-   the Ethereum address
-1. Get some fiat into an exchange, such as binance, that allows XMR withdrawls
-1. Withdraw XMR to CakeWallet - an andoid based XMR lightwallet
-   1. binance knows your kyc info, so they know what XMR address they sent to
-1. Send from CakeWallet to a new account on
-   http://xmrwalletdatuxds.onion/#/login.html using the onion address
-   1. CakeWallet gave away your IP address to the XMR network, but it broke the
-      link back to binance
-1. Go to MorphToken and set up an exchange to accept XMR and morph into ETH and
-   sent to your Fortmatic address
-1. Send from xmrwallet to the morphtoken address, and await the receipt of ETH
-   in the wallet
-   1. xmrwallet hid your IP address from xmrnetwork
-
-To map back your KYC info at binance or discover your IP address would require:
-
-1. XMR network snooped your IP when you sent to xmrwallet, then xmrwallet
-   revealed you used morphtoken, which then revealed you exchanged for the ETH
-   used to start the org.
-1. Without the CakeWallet step, all that would be required is for binance,
-   xmrwallet, morphtoken to all be compelled to share their transaction records,
-   to link back to your KYC info at binance.
-1. With CakeWallet, also need to compromise either CakeWallet, or the
-   xmrnetwork, and then get your IP address, then link that IP address to your
-   behaviour. So Cakewallet breaks the transactional links, xmrwallet breaks the
-   IP address link. Or you could use a full XMR node over TOR, but this is a
-   pain.
-
-The trouble is that this is lossy, and a low loss method is required for the
-bulk of the funding coming in.
-
-Operational rules:
-
-1. Only develop using identity accounts - no dev on the “root” or “user”
-   accounts
 1. Set an offensive color theme on torbrowser, so it is immediately clear when
    it is in use. Try not to use regular browser as this can lead to correlation
    with you IP and identity
-1. Always sign everything, to prevent fraud
 
-Deniability
+### AWS Procedure
 
-Always need to have layered reasons for how we came across any data we get
-questioned over. Ideas are: Every project out in the public and part of some
-announcement or mailing list
+TODO
+
+## Pitfalls
+
+1. Urls in keepass accounts that when double clicked open protected urls in
+   browser
+1. Linked cloud accounts, that if one cloud service is accessed on clearnet,
+   other might be able to trace back
+1. Dev projects might try to make data requests out to other sites - none of our
+   sites should ever request anything from outside the current realm
+1. Vscode might follow links in code base - turn this off by disabling any kind
+   of vscode link detection in user wide settings
+1. opened cloud anonymous account url in clearnet after clicking on url in
+   keepass and having it open automatically in chrome, not behind tor
+1. Generating information inside the project that can be correlated somehow.
+1. Credit card acquisition
+   1. Paying with electronic means
+   1. Paying with unwashed crypto
+   1. Paying with cash from a bank or foreign exchange branch
+   1. Cameras on the purchase spot
+   1. Number plate from cameras on purchase spot
+   1. Google location tracking on phone during purchase
+   1. Recognized by shop merchant
+   1. Using card too soon after acquisition
+   1. Recommended best practice:
+      1. Purchase something from a bakery to break the cash
+      1. Use small shops away from city centres
+      1. Wear sunglasses, a hood, a mask
+      1. Turn off phone before entering
+      1. Buy local, but not somewhere frequent, so being in the area isn’t
+         correlated
+1. Identity correlation
+   1. Entering password for another account in relation to another account
+   1. Accessing a rare page on clearnet, then same page shortly after on tor
+   1. Accessing a rare page signed in as a github user, then visiting same page
+      signed in as protected identity over tor
+   1. Generating info, like pictures, or names, then using that info in projects
+1. Plugins for tooling - anything that sends telemetry back to some owner
+   1. License key information for tooling can be identifying Leaks from
+      handwriting - use a diagramming tool like mermaid
+
+### Accessing the Aragon DAO
+
+The DAO is available at https://client.aragon.org/#/dreamcatchertech/
+
+Using TOR browser with metamask extension installed. Cleanest way since wallet
+is entirely self sovereign, however the extension does introduce some risk to
+anonymity. The extension should be disabled when not in use on Aragon, and a new
+Tor identity used whenever it is enabled or disabled. From checking the network
+activity in the developer tools for the extension, its normal operations all go
+thru TOR.
+
+For those mostconcerned, we recommend running the browser inside a
+whonixWorkstation, or compiling the extension from source on github. Worst case
+a leak will be made to metamask or their services such as infura that maps your
+eth address to your ip address. This does not compromise anonymity as a
+producer, but might be undesirable as a funder. Activity in the extension can be
+traced using
+`about:devtools-toolbox?type=extension&id=webextension%40metamask.io` in the url
+box.
+
+This extension can read every webpage you go to, so only go to the aragon client
+when it is activated. If the tor process is terminated, the metamask extension
+cannot access infura, showing that it was fetching over tor. Opt out of any
+telemetry requests.
+
+Money routing cost comparison:
+
+- binance > ETH > tornado > metamask swap > DAI Cost of transfer: $50USD tornado
+  contract gas, but could probably get it for 10USD withdrawl from tornado
+  60USD, cheapest is 24USD
+- binance > DAI > tornado > DAI Cost of transfer: 50USD tornado contract gas
+  withdraw gas fee $3.77
+
+Sending in ETH is better since lets amounts up to 50kUSD go thru, and has more
+traffic in the anonymity set. Downside is the price of ETH changing while the
+funds are waiting
+
+## Deniability
+
+Always have layered reasons for how you came across any data you might get
+questioned over. The best way is publishing blogs and projects as soon as
+possible, spreading these ideas as far as possible.
 
 Make info as public as possible with as much traffic on it as possible. Follow a
 standard with other people following similar goals. The only secrets should be
 key material.
+
+It is never about being completely anonymous - its just about not being the
+biggest fish in the anonymity pond so to speak. For example if the cash mixer
+service you use is compromised by some state level actor, they won't really want
+it known that they can compromise it, since they're looking for something
+serious like a terrorist or war criminal. If all you're trying to do is write
+software without getting judged for who you are as a human, they are very
+unlikely to share the information about you with anyone.
 
 ## Bastions
 
@@ -361,8 +399,6 @@ others, and have no contact. Code sharing must be done offline. Only danger is
 going to anon github urls while logged in to github, which only matters if
 github gets breached, and should be covered by publicizing the urls.
 
-Ezzo card can give credit cards for bitcoin: https://ezzocard.com/how-to-pay
-
 https://ssd.eff.org/en/module/your-security-plan
 
 Keep the infrastructure hidden - the worst thing that could happen is your site
@@ -374,79 +410,46 @@ code it needs to be via offline means. Leakage from one browsing anothers github
 repos while logged in is only damaging if github is breached. Always protect the
 infrastructure.
 
-## Activity zones
-
-1. Personal: whatsapp, jitsi, anything Must at least be encrypted
-1. Promotion: public material
-1. Testing: used to test applications, deployments Must secure IP addresses
-   Breach is non fatal
-1. Production: public versions of sites, governance Any identity breach is fatal
-
-Types of identity:
-
-1. IP address
-1. Machine
-1. PGP key
-1. Chain key
-
-## Sharing libraries between bastions
+Sharing libraries between bastions:
 
 1. nominate one user as the library owner
 1. in each repo, stored in their home dir, chmod .git 700 so that no accidental
    commits can be made by any other user, leaking the relationship between users
 1. make a group shared between the dev accounts called 'dev'
 
-## Pitfalls
+## Cashing out to fiat
 
-1. Urls in keepass accounts that when double clicked open protected urls in
-   browser
-1. Linked cloud accounts, that if one cloud service is accessed on clearnet,
-   other might be able to trace back
-1. Dev projects might try to make data requests out to other sites - none of our
-   sites should ever request anything from outside the current realm
-1. Vscode might follow links in code base - turn this off by disabling any kind
-   of vscode link detection in user wide settings
-1. opened cloud anonymous account url in clearnet after clicking on url in
-   keepass and having it open automatically in chrome, not behind tor
-1. Generating information inside the project that can be correlated somehow.
-1. Credit card acquisition
-   1. Paying with electronic means
-   1. Paying with unwashed crypto
-   1. Paying with cash from a bank or foreign exchange branch
-   1. Cameras on the purchase spot
-   1. Number plate from cameras on purchase spot
-   1. Google location tracking on phone during purchase
-   1. Recognized by shop merchant
-   1. Using card too soon after acquisition
-   1. Recommended best practice:
-      1. Purchase something from a bakery to break the cash
-      1. Use small shops away from city centres
-      1. Wear sunglasses, a hood, a mask
-      1. Turn off phone before entering
-      1. Buy local, but not somewhere frequent, so being in the area isn’t
-         correlated
-1. Identity correlation
-   1. Entering password for another account in relation to another account
-   1. Accessing a rare page on clearnet, then same page shortly after on tor
-   1. Accessing a rare page signed in as a github user, then visiting same page
-      signed in as protected identity over tor
-   1. Generating info, like pictures, or names, then using that info in projects
-1. Plugins for tooling - anything that sends telemetry back to some owner
-   1. License key information for tooling can be identifying Leaks from
-      handwriting - use a diagramming tool like mermaid
+For the best price and trust, use an exchange like binance.com but be aware you
+will need to pass KYC verification. If you need to cash out anonymously, then
+the best way to do that is using local based exchanges. These exchanges help you
+conduct trades with people individually. For example, selling BTC, DAI, or ETH
+to a local user results in about 1% below market loss, but will take about 15
+minutes for the funds to arrive, and most importantly will result in a direct
+person to person transfer into your bank account.  
+Alternatively you might choose to get a crypto based visa card to let you spend
+directly. Local exchanges of note are:
 
-## Receiving Funding
+- localbitcoins.com - the original, very reliable, requires KYC
+- localcryptos.com - good volume, no KYC
 
-How can your project receive funding, and maintain anonymity ? Set up an android
-based wallet, with full privacy on. These funds will be managed by the central
-chain You have to go thru stages:
+Depending on your jurisdiction, you may owe taxes and levies to your local
+government. These fees usually become due at time of withdrawl, so be sure you
+know your responsibilities here. Remember the fiat money system was built by
+your government, and so they have the right to do whatever they wish with it,
+including levying taxes.
 
-- burning / investing
-- minor funding received - first signal might be useful
-- income
-- external code contribution
-- profitability
-- scale
+DAI is a good base to run your venture on because:
+
+- DAI being pegged to USD is stable relative to Bitcoin or any other crypto
+  asset which has a thinly traded marketplace relative to USD
+- DAI can be run thru a mixer such as
+  [Tornado.cash](https://medium.com/@tornado.cash/introducing-private-transactions-on-ethereum-now-42ee915babe0)
+  which makes it difficult to trace the origin of the funds whilst still giving
+  investors the option to prove it was them in the future.
+- DAI is not subject to the US Federal reserve, which owns all USD, and can
+  seize USD backed coins such as Tether and others based on their operational
+  policies. DAI is virtual, and not subject to those forces, altho it has a
+  different set of weaknesses
 
 ## Shutting Down
 

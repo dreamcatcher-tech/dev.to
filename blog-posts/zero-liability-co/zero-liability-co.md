@@ -62,3 +62,21 @@ properties about themselves and their work rather than a full destruction of
 privacy. For example you can declare yourself a tax resident of x country for
 the projects you contributed there, and you can pay tax to that country, but you
 need not assosciate your name with it.
+
+The bringers of novel knowledge are often unwelcomed, some violently so
+(references). For this reason, the Dreamcatcher network is designed such that
+any contributors of work or funds are free to stay anonymous, and at their wish
+only reveal as much as they wish. They can also release graduated information
+rather than all or nothing. Indeed consumers within the network also can operate
+this way, and share any portion of their consumption data on the network
+
+## Operating Activities
+
+1. Real life promotion (conferences, videos, friends)
+1. Online Promotion (forums, emails, blogs)
+1. Code commits
+1. Issue posting
+1. TESTING Amazon deployments using serverless.com tooling
+1. PRODUCTION Amazon deployments using serverless.com tooling
+
+the concept of the zero liability company only the code matters
