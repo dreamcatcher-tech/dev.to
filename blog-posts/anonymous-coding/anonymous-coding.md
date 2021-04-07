@@ -15,12 +15,12 @@ _“It’s only funny until someone loses an identity”_
 1. [Coding Under Threat](#coding-under-threat)
 1. [Value of anonymous code production](#value-of-anonymous-code-production)
 1. [Goals of an Operating Model](#goals-of-an-operating-model)
-1. [Actors in the model](actors-in-the-model)
+1. [Actors in the model](#actors-in-the-model)
 1. [Threat Types](#threat-types)
 1. [Required Items and Tooling](#required-items-and-tooling)
 1. [Architecture](#architecture)
-1. [Getting a burner number](getting-a-burner-number)
-1. [Importing existing code](importing-existing-code)
+1. [Getting a burner number](#getting-a-burner-number)
+1. [Importing existing code](#importing-existing-code)
 1. [Workstation Procedure](#workstation-procedure)
 1. [AWS Procedure](#aws-procedure)
 1. [Pitfalls](#pitfalls)
@@ -204,7 +204,7 @@ TODO
 1. Linked cloud accounts, that if one cloud service is accessed on clearnet, other might be able to trace back
 1. Dev projects might try to make data requests out to other sites - none of our sites should ever request anything from outside the current realm
 1. Vscode might follow links in code base - turn this off by disabling any kind of vscode link detection in user wide settings
-1. opened cloud anonymous account url in clearnet after clicking on url in keepass and having it open automatically in chrome, not behind tor
+1. opening one of the anonymous account url's in clearnet by clicking on url in keepass and having it open automatically in default browser, which is not behind tor
 1. Generating information inside the project that can be correlated somehow.
 1. Credit card acquisition
    1. Paying with electronic means
@@ -285,6 +285,12 @@ Sharing libraries between bastions:
 1. nominate one user as the library owner
 1. in each repo, stored in their home dir, chmod .git 700 so that no accidental commits can be made by any other user, leaking the relationship between users
 1. make a group shared between the dev accounts called 'dev'
+
+Running independent versions of the tor browser:
+
+1. in the second torbrowser, in `about:config` change the following:
+   1. `network.proxy.socks_port` to be different to any other instances
+   1. `extensions.torlauncher.control_port` to be different to any other instances
 
 ## Cashing out to fiat
 

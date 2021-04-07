@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Emoji in the TOR Browser'
 cover_image: 'https://raw.githubusercontent.com/dreamcatcher-tech/dev.to/master/blog-posts/anonymous-coding/assets/dragon.jpg'
 description: 'Emoji in the TOR Browser'
@@ -14,7 +14,7 @@ Typically the browser displays a tofu character, and nothing is useful anymore, 
 
 Steps to get it on the page:
 
-1. Grab the firefox font from https://github.com/mozilla/fxemoji
+First Grab the firefox font from https://github.com/mozilla/fxemoji
 
 Find an emoji that is different in chrome to the fxemoji, so can know the page is loading it correctly.
 
